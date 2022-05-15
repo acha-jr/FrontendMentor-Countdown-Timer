@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+
+  --white: hsl(0, 0%, 100%);
+  --dark-desaturated-blue: hsl(236, 21%, 26%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --very-dark-blue-black: hsl(234, 17%, 12%); /*(mostly black)*/
+
+  font-family: "Red Hat Text", sans-serif;
+  text-transform: uppercase;
+}
+body {
+  background: url(./images/pattern-hills.svg), url(./images/bg-stars.svg),
+    linear-gradient(var(--very-dark-blue), hsl(272, 21%, 14%));
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, center;
+  background-attachment: fixed;
+  padding-bottom: 30px;
+}
+h3 {
+  margin-top: 130px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 10px;
+  color: var(--white);
+}
+.timer {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  place-items: center;
+  margin: 0px auto;
+  margin-top: 100px;
+  width: 680px;
+}
+[box] {
+  position: relative;
+  border-radius: 10px;
+  width: 150px;
+  background: linear-gradient(hsl(240, 21%, 22%) 50%, hsl(236, 21%, 26%) 50%);
+  display: grid;
+  box-shadow: 0px 10px 0px #1a1a23;
+  transition: 0.3s;
+}
+[box] h1 {
+  padding: 20px;
+  align-self: center;
+  text-align: center;
+  background: linear-gradient(hsl(346, 63%, 57%) 50%, var(--soft-red) 50%);
+  font-size: 80px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.left,
+.right {
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border-radius: 0px 12px 12px 0px;
+  background: hsl(231, 23%, 11%);
+  align-self: center;
+}
+.right {
+  right: 0;
+  transform: rotate(180deg);
+}
+p {
+  color: var(--grayish-blue);
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 14px;
+}
+.social {
+  display: flex;
+  color: var(--grayish-blue);
+  width: 150px;
+  margin: 0px auto;
+  margin-top: 200px;
+  justify-content: space-between;
+}
+i {
+  cursor: pointer;
+  font-size: 24px;
+  transition: 0.3s;
+}
+i:hover {
+  color: var(--soft-red);
+}
+.attribution > *,
+.attribution {
+  text-transform: none;
+}
+.attribution {
+  text-align: center;
+  margin-top: 50px;
+  color: var(--grayish-blue);
+  font-size: 12px;
+}
+.attribution a {
+  text-decoration: none;
+  color: var(--soft-red);
+}
+
+@media screen and (min-width: 375px) and (max-width: 670px) {
+  .timer {
+    width: 90%;
+  }
+  [box] {
+    width: 70px;
+  }
+  [box] h1 {
+    font-size: 30px;
+    place-self: center;
+    padding: 15px;
+  }
+  h3 {
+    font-size: 18px;
+    letter-spacing: 10px;
+  }
+  p {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+}
