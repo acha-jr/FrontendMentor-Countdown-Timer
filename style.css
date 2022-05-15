@@ -21,7 +21,6 @@ body {
     linear-gradient(var(--very-dark-blue), hsl(272, 21%, 14%));
   background-repeat: no-repeat, no-repeat;
   background-position: bottom, center;
-  background-attachment: fixed;
   padding-bottom: 30px;
 }
 h3 {
