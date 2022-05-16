@@ -110,7 +110,7 @@ i:hover {
 
 @media screen and (min-width: 375px) and (max-width: 670px) {
   body{
-    background attachment: fixed, fixed;
+    background-attachment: fixed;
   }
   .timer {
     width: 90%;
