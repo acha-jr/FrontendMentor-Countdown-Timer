@@ -8,7 +8,7 @@ minutes.innerHTML = "00";
 hours.innerHTML = "00";
 days.innerHTML = "00";
 
-let countDate = new Date("29 May, 2022 16:00:00").getTime();
+let countDate = new Date("3 July, 2022 11:59:00").getTime();
 
 const countdown = () => {
   //current time
@@ -36,4 +36,8 @@ const countdown = () => {
   twoDigits(minutes);
   twoDigits(seconds);
 };
-setInterval(countdown, 1000);
+setInterval(()=>{
+  if(days > 0){
+    countdown;
+  }
+}, 1000);
