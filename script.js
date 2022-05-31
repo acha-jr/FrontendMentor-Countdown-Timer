@@ -8,7 +8,8 @@ minutes.innerHTML = "00";
 hours.innerHTML = "00";
 days.innerHTML = "00";
 
-let countDate = new Date("3 July, 2022 11:59:00").getTime();
+// End time
+let countDate = new Date("3 July, 2022 11:59:59").getTime();
 
 const countdown = () => {
   //current time
@@ -25,6 +26,13 @@ const countdown = () => {
   minutes.innerHTML = Math.floor((period % (1000 * 60 * 60)) / (1000 * 60));
   seconds.innerHTML = Math.floor((period % (1000 * 60)) / 1000);
 
+  if (days.innerHTML < 0) {
+    days.innerHTML = 0;
+    hours.innerHTML = 0;
+    minutes.innerHTML = 0;
+    seconds.innerHTML = 0;
+  }
+  
   //Changes single digit values to two-digit
   const twoDigits = (e) => {
     if (e.innerHTML < 10) {
@@ -36,8 +44,4 @@ const countdown = () => {
   twoDigits(minutes);
   twoDigits(seconds);
 };
-setInterval(()=>{
-  if(days > 0){
-    countdown;
-  }
-}, 1000);
+setInterval(countdown, 1000);
