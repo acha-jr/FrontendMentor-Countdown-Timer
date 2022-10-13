@@ -9,7 +9,7 @@ hours.innerHTML = "00";
 days.innerHTML = "00";
 
 // End time
-let countDate = new Date("3 July, 2022 11:59:59").getTime();
+let countDate = new Date("1 January, 2023 00:00:00").getTime();
 
 const countdown = () => {
   //current time
